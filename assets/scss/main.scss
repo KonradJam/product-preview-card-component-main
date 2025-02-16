@@ -1,0 +1,113 @@
+@use 'assets/reset';
+@use 'assets/variables' as *;
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-cream;
+}
+
+.product {
+    margin-inline: $space-m;
+    border-radius: 8px;
+    overflow: hidden;
+
+
+    &__image {
+    inline-size: 100%;
+    block-size: auto;
+    object-fit: cover;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        gap: $space-l;
+        padding: $space-xl;
+        background-color: $color-white;
+    }
+
+    &__category {
+        font-family: $font-sans-serif;
+        font-size: $font-size-xs;
+        color: $color-grey;
+        text-transform: uppercase;
+        letter-spacing: .3125rem;
+    }
+
+    &__name {
+        font-family: $font-serif;
+        font-size: $font-size-l;
+        line-height: $line-height-xs;
+        color: $color-black;
+    }
+
+    &__description {
+        font-family: $font-sans-serif;
+        font-size: $font-size-s;
+        line-height: $line-height-m;
+        color: $color-grey;
+    }
+
+    &__pricing {
+        display: flex;
+        align-items: center;
+        gap: $space-m;
+    }
+
+    &__price-current {
+        font-family: $font-serif;
+        font-size: $font-size-l;
+        color: $color-green-500;
+    }
+
+    &__price-last {
+        font-family: $font-sans-serif;
+        font-size: $font-size-s;
+        color: $color-grey;
+        text-decoration: line-through;
+    }
+
+    &__btn-add {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: $space-s;
+        font-family: $font-sans-serif;
+        font-size: $font-size-s;
+        font-weight: 700;
+        color: $color-white;
+        background-color: $color-green-500;
+        padding-block: $space-m;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    &__btn-add:hover, &__btn-add:focus {
+        background-color: $color-green-700;
+        outline: none;
+    }
+
+    &__btn-icon {
+        display: inline;
+        inline-size: 1rem;
+        block-size: 1rem;
+        object-fit: contain;
+    }
+
+    @media (min-width: 37.5rem) {
+        & {
+            display: flex;
+            flex-direction: row;
+            max-inline-size: 37.5rem;
+            max-block-size: 28.5rem;
+        }
+
+        &__image {
+            max-inline-size: 18.75rem;
+        }
+    }
+}

@@ -1,0 +1,133 @@
+/* RESET - Start */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-inline-size: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*RESET - stop*/
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(30, 38%, 92%);
+}
+
+.product {
+  margin-inline: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.product__image {
+  inline-size: 100%;
+  block-size: auto;
+  object-fit: cover;
+}
+.product__body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+  background-color: hsl(0, 0%, 100%);
+}
+.product__category {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8125rem;
+  color: hsl(228, 12%, 48%);
+  text-transform: uppercase;
+  letter-spacing: 0.3125rem;
+}
+.product__name {
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+  line-height: 1;
+  color: hsl(212, 21%, 14%);
+}
+.product__description {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: hsl(228, 12%, 48%);
+}
+.product__pricing {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.product__price-current {
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+  color: hsl(158, 36%, 37%);
+}
+.product__price-last {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  color: hsl(228, 12%, 48%);
+  text-decoration: line-through;
+}
+.product__btn-add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(158, 36%, 37%);
+  padding-block: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.product__btn-add:hover, .product__btn-add:focus {
+  background-color: hsl(158, 42%, 18%);
+  outline: none;
+}
+.product__btn-icon {
+  display: inline;
+  inline-size: 1rem;
+  block-size: 1rem;
+  object-fit: contain;
+}
+@media (min-width: 37.5rem) {
+  .product {
+    display: flex;
+    flex-direction: row;
+    max-inline-size: 37.5rem;
+    max-block-size: 28.5rem;
+  }
+  .product__image {
+    max-inline-size: 18.75rem;
+  }
+}
