@@ -19,7 +19,7 @@ This is a solution to the [Product preview card component challenge on Frontend 
 
 ### Links
 
-Live Site URL: [GitHub Pages]()
+Live Site URL: [GitHub Pages](https://konradjam.github.io/product-preview-card-component-main/)
 
 ## My process
 
